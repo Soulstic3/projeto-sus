@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/agendamento.css">
+    <title>Agendamento de Consulta</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/agendamento.js"></script>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+            <div class="container">
+                <a class="navbar-brand" href="http://localhost/Projeto_SUS/">
+                    <img class="logotipo" src="../assets/img/2560px-Logo_SUS.svg.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                                <a class="nav-link" href="../../index.html">Home</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="agendamento.html">Agendar Consulta</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="consultas.html">Ver Consultas</a>
+                            </li>
+                            <li class="nav-item mr-3">
+                                <a class="nav-link" href="dadosUsuario.php">Ver Perfil</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container-fluid">
+            <form method="post" action="../../backend/agendamento/realizar_agendamento.php" onsubmit="return validarFormulario()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container1">
+                            <div class="item">
+                                <input type="radio" class="btn-check" name="options" id="option1" value="Dentista">
+                                <label class="btn btn-outline-primary d-grid gap-2 mx-auto" for="option1" class="figure">Marcar consulta com dentista</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" class="btn-check" name="options" id="option2" value="Médico Geral">
+                                <label class="btn btn-outline-primary d-grid gap-2 mx-auto" for="option2" class="figure">Marcar consulta com médico geral</label>
+                            </div>
+                            <div class="item">
+                                <input type="radio" class="btn-check" name="options" id="option3" value="Vacinação">
+                                <label class="btn btn-outline-primary d-grid gap-2 mx-auto" for="option3" class="figure">Marcar vacinação</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container2">
+                            <label for="data">Dia da Semana:</label><br>
+                            <input type="date" id="dataConsulta" name="dataConsulta" required><br><br>
+        
+                            <label for="hora">Horário:</label><br>
+                            <select class="horario" name="horarioConsulta" id="horarioConsulta" required>
+                                <option value="" selected>---Escolha---</option>
+                                <option value="7h00">7h00</option>
+                                <option value="7h30">7h30</option>
+                                <option value="8h00">8h00</option>
+                                <option value="8h30">8h30</option>
+                                <option value="9h00">9h00</option>
+                                <option value="9h30">9h30</option>
+                                <option value="10h00">10h00</option>
+                                <option value="10h30">10h30</option>
+                                <option value="11h00">11h00</option>
+                                <option value="11h30">11h30</option>
+                                <option value="13h00">13h00</option>
+                                <option value="13h30">13h30</option>
+                                <option value="14h00">14h00</option>
+                                <option value="14h30">14h30</option>
+                                <option value="15h00">15h00</option>
+                                <option value="15h30">15h30</option>
+                                <option value="16h00">16h00</option>
+                            </select><br><br>
+        
+                            <input type="submit" value="Enviar">
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="frontend/assets/css/style.css">
+    <script src="frontend/assets/js/cadastroUsuario.js"></script>
+    <style>
+        /* Estilos para o container */
+        #loginContainer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            z-index: 9999;
+            transition: opacity 0.3s ease-out;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilização para os botões dentro do contêiner */
+        #loginContainer div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        #loginContainer button {
+            background-color: #007bff;
+            width: 100px;
+            height: 35px;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        #loginContainer button:first-child {
+            margin-left: 30px;
+        }
+
+        #loginContainer button:last-child {
+            margin-right: 30px;
+        }
+
+        /* Estilos para esconder formulários */
+        .form-container {
+            display: none;
+        }
+
+        /* Mostrar apenas o formulário ativo */
+        .form-container.active {
+            display: block;
+        }
+
+        /* Estilos para o botão no header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+
+        header .logo {
+            flex: 1;
+        }
+
+        header button {
+            background-color: #007bff;
+            width: 170px;
+            height: 50px;
+            color: white;
+            padding: 8px 16px;
+            margin-right: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Agendamento Médico</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img class="logotipo" src="frontend/assets/img/2560px-Logo_SUS.svg.png">
+        </div>
+        <!-- Botão no header -->
+        <button onclick="mostrarFormulario()">Entrar / Cadastrar</button>
+    </header>
+
+    <main>
+        <section class="main">
+            <div class="conteudo">
+                <h1>Marque suas consultas<br>mais facilmente pelo<br>novo site do SUS.</h1>
+            </div>
+        </section>
+    </main>
+
+    <div id="loginContainer">
+        <!-- Botões para alternar entre login e cadastro -->
+        <div>
+            <button onclick="mostrarForm('login')" id="btnLogin">Login</button>
+            <button onclick="mostrarForm('cadastro')" id="btnCadastro">Cadastro</button>
+        </div>
+        <!-- Formulário de login -->
+        <form class="form-container active" id="formLogin" method="post" action="backend/usuario/proc_login.php">
+            <h2>Login</h2>
+            <label for="cpf">CPF:</label><br>
+            <input type="text" id="cpf" name="cpf"><br><br>
+            <label for="password">Senha:</label><br>
+            <input type="password" id="senha" name="senha"><br><br>
+            <input type="submit" value="Login">
+        </form>
+
+        <!-- Formulário de cadastro -->
+        <form class="form-container" id="formCadastro" action="backend/usuario/proc_cadastro.php" method="post"
+        onsubmit="return validarFormulario()">
+            <h2>Cadastro</h2>
+            <label for="nome">Seu nome:</label><br>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="cartao_sus">Cartão do SUS:</label><br>
+            <input type="text" id="cartao_sus" name="cartao_sus"><br><br>
+
+            <label for="novoCPF">CPF:</label><br>
+            <input type="text" id="novoCPF" name="novoCPF"><br><br>
+
+            <label for="cartao_sus">Telefone:</label><br>
+            <input type="text" id="telefone" name="telefone"><br><br>
+
+            <label for="nascimento">Data de nascimento:</label> <br>
+            <input type="date" name="nascimento" id="nascimento"> <br><br>
+
+            <label for="sexo">Sexo:</label><br>
+            <select id="sexo" name="sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            </select><br><br>
+
+            <!-- Mensagem de erro para a confirmação de senha -->
+            <p id="mensagemErro" style="color: red; margin-bottom: 5px;"></p>
+
+            <label for="novaSenha">Senha:</label><br>
+            <input type="password" id="novaSenha" name="novaSenha" oninput="validarSenha()"><br><br>
+
+            <label for="confirmarSenha">Confirmar Senha:</label><br>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" oninput="validarSenha()"><br><br>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+</body>
+</html>

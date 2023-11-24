@@ -1,0 +1,145 @@
+/* CONTEÚDO GERAL */
+
+@font-face {
+    font-family: Sen;
+    src: url(font/Sen-Regular.ttf);
+}
+
+html, body {
+    background-color: #2C508A;
+    margin: 0; /*REMOVE MARGENS PADRAO*/
+    padding: 0; /*REMOVE PREENCHIMENTO PADRAO*/
+    font-family: "Sen";
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* vh - define a altura da tela como 100% da janela do navegador*/
+    width: 100%; /* vw - representa a porcentagem da largura da janela visivel  - IMPORTANTE!*/
+    max-width: 100vw;
+    
+
+   /* overflow-x: hidden; REMOVE A BARRA DE ROLAGEM HORIZONTAL NO CORPO DO DOCUMENTO
+   NÃO É IDEAL QUANDO HÁ UM PROBLEMA DE LAYOUT!*/
+    
+}
+
+
+.logotipo {
+    width: 10vw;/*tamanho da imagem logo*/
+}
+
+header {
+   /* display: flex;
+    justify-content: space-between;
+    Não mexa*/
+    background-color: white;
+}
+
+
+
+.cadastro-login {
+    background-color: white;
+}
+
+.container-cadastro {
+    text-align: center;
+   
+    padding: 4%; /*espaçamento de um elemento*/
+
+}
+
+.container-cadastro, a {
+    margin: 4px;
+    color: #3970c9;
+
+}
+
+.container-login {
+    text-align: center;
+    padding: 4%; /*espaçamento de um elemento*/
+}
+.container-login, a {
+    
+    margin: 4px;
+    color: #3970c9;
+
+}
+
+@media (max-width : 100vw) {
+ .botao-entrar {
+    text-align: center;
+    display: inline-block;
+    background-color: #3970c9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1em; /* em - tamanho da fonte do texto dentro do botao*/
+    transition: background-color 0.3s ease; /*transiçao suave*/
+    white-space: nowrap;
+    margin: 10px; /*espaço entre texto e botao*/
+ }
+
+
+}
+
+/*ALINHAR O CONTAINER NO CENTRO*/
+.row {
+    width: 100%;
+    margin: 0;
+   
+}
+
+.conteudo {
+    margin-top: 13vh;
+    margin-bottom: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo, h1 {
+    font-size: 4vw; /*TAMANHO DO TEXTO*/
+    color: white;
+    margin-inline: 50px;
+    white-space: nowrap; /*TEXTO RESPONSIVO SEM QUEBRA DE LINHAS*/
+    
+}
+
+/*SERVE PARA DEIXAR RESONSIVO*/
+@media screen and (max-width:768px) {
+   /* body {
+        overflow-x: hidden;
+    } */
+    
+    .row {
+        width: 100%;
+        margin: 0;
+    }
+
+    .conteudo, h1 {
+        font-size: 6vw; /*TAMANHO DO TEXTO*/
+        margin-inline: 20px;
+        text-align: left;
+        white-space: normal; /*TEXTO RESPONSIVO com quebra*/
+        display: block; /*cada parágrafo em uma linha separada*/
+    }
+
+    .logotipo {
+        min-width: 100px;
+        padding: 1.0vw; /*espaço interno em torno do conteudo da imagem*/
+        
+    }
+}
+
+/* padrao.css */
+
+.container-01 {
+    background-color: white;
+    margin: 50px;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    border-radius: 20px;
+}

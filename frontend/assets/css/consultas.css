@@ -1,0 +1,27 @@
+.titulo{
+    text-align: center;
+    padding-top: 200px;
+    background-color: white;
+    height: 650px;
+}
+
+.flexbox-container{
+    border-radius: 20px;
+    padding: 30px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+    margin-left:20%;
+    margin-right: 20%;
+}
+
+.flexbox-item{
+    margin: 10px;
+}
+
+.botao{
+    margin-top: 100px;
+}
