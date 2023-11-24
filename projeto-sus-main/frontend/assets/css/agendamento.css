@@ -1,0 +1,47 @@
+.col-md-6 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*alinha os itens horizontalmente*/
+    align-items: center;  /*alinha verticalmente*/
+    font-weight: bold; /*TEXTO EM NEGRITO*/
+    box-sizing: border-box; /* Inclui a largura da borda e do preenchimento no cálculo total da largura */
+}
+
+.row {
+    padding-top: 12%;
+}
+
+.container2 {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+}
+
+.item {    /*cada item em colunas*/
+margin: 10px;  /*espaçamemto entre os itens*/
+}
+
+
+
+form {
+    margin: 0;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*.black {
+    white-space: nowrap;
+    
+    left: 100px;
+    text-decoration: none; /*remove a formataçao de sublinhado*
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+*/

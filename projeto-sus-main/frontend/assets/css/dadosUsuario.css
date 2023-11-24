@@ -1,0 +1,78 @@
+
+.icone_usuario {
+  /*  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;*/
+    display: grid;
+    place-items: center; 
+}
+
+.icone_usuario h5 {
+    display: block;
+}
+
+.icone_usuario img {
+    width: 8vw; /*tamanho da imagem logo*/
+    display: block;
+
+    /* margin-left: vw; espaçamento da margem*/
+    /* margin: 0 auto;  centraliza a imagem horizontalmente*/
+}
+
+/*DISTÂNCIA ENTRE OS CONTAINERS*/
+.dados1 {
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    max-width: 100vw;
+    
+}
+
+/*Referente aos containers dos dados*/
+
+.col-md-6 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+p {
+   text-align: left;
+}
+
+
+
+/*SERVE PARA DEIXAR RESONSIVO*/
+
+@media screen and (max-width:768px) {
+
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    min-width: 80px;
+    max-width: 100%; /*garante que nao ultrapasse o container pai. ajuda na adaptabilidade*/
+}
+
+
+}
+
+.campo-estatico {
+    pointer-events: none; /*desativa interaçao com o campo de texto*/
+    border: none; /*remove a borda*/
+    
+    width: 25vw; /*LARGURA DA LINHA*/
+    border-bottom: 1px solid black; /*define a linha contínua abaixo dos campos*/
+    padding-bottom: 2px; /*DISTÂNCIA ENTRE LINHA E O CAMPO*/
+    font-weight: bold; /*TEXTO EM NEGRITO*/
+
+    box-sizing: border-box; /* Inclui a largura da borda e do preenchimento no cálculo total da largura */
+    min-width: 250px;
+   
+    
+   /* margin-bottom: 5px;  Adiciona espaço abaixo do campo */
+}
