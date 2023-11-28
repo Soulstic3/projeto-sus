@@ -1,0 +1,35 @@
+/* Estilos para a classe de título */
+.titulo {
+    text-align: center; /* Alinha o texto ao centro */
+    padding-top: 12vw; /* Define o preenchimento superior */
+    background-color: rgb(255, 255, 255); /* Define a cor de fundo */
+    height: auto; /* Define a altura */
+}
+
+/* Estilos para o contêiner flexível */
+.flexbox-container {
+    border-radius: 20px; /* Define o raio da borda */
+    padding: 30px; /* Define o preenchimento */
+    height: 350px; /* Define a altura */
+    display: flex; /* Define o elemento como flexível */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    justify-content: center; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    background-color: #e6e6e6; /* Define a cor de fundo */
+    margin-inline: 10vw;
+}
+
+/* Estilos para o item flexível */
+.flexbox-item {
+    margin: 10px; /* Define a margem */
+}
+
+/* Estilos para o botão */
+.botao {
+    margin-top: 5vw; /* Define a margem superior */
+    margin-bottom: 15px;
+}
+
+.campo-estatico {
+    text-align: center; /* Alinha o texto no centro */
+}

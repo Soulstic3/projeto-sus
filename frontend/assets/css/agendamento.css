@@ -1,0 +1,38 @@
+/* Estilos para a coluna de tamanho médio */
+.col-md-6 {
+    height: 100%; /* Define a altura como 100% */
+    display: flex; /* Define o elemento como flexível */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    justify-content: center; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    font-weight: bold; /* Define a fonte em negrito */
+    box-sizing: border-box; /* Inclui a largura da borda e do preenchimento no cálculo total da largura */
+}
+
+/* Estilos para a linha */
+.row {
+    padding-top: 12%; /* Define o preenchimento superior */
+}
+
+/* Estilos para o contêiner 2 */
+.container2 {
+    padding: 20px; /* Define o preenchimento */
+    background-color: #f0f0f0; /* Define a cor de fundo */
+    border-radius: 20px; /* Define o raio da borda */
+    text-align: center; /* Alinha o texto ao centro */
+    width: 250px; /* Define a largura */
+    height: 250px; /* Define a altura */
+}
+
+/* Estilos para os itens */
+.item {
+    margin: 10px; /* Define a margem */
+}
+
+/* Estilos para o formulário */
+form {
+    margin: 0; /* Define a margem */
+    padding: 100px; /* Define o preenchimento */
+    display: flex; /* Define o elemento como flexível */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviço de Agendamento SAS</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="frontend/assets/css/style.css">
+    <link rel="stylesheet" href="frontend/assets/css/index.css">
+</head>
+<body style="background-color: #0059b8;">
+    <header>
+        <div class="logo">
+            <!-- Logo do SUS -->
+            <img class="logotipo" src="frontend/assets/img/2560px-Logo_SUS.svg.png">
+        </div>
+        <!-- Botão no header para abrir o formulário de login/cadastro -->
+        <button onclick="mostrarFormulario()">Entrar / Cadastrar</button>
+    </header>
+
+    <main>
+        <section class="main">
+            <div class="conteudo">
+                <!-- Título principal -->
+                <h1>Marque suas consultas<br>mais facilmente pelo<br>novo site do SAS.</h1>
+            </div>
+        </section>
+    </main>
+
+    <div id="loginContainer">
+        <!-- Botões para alternar entre login e cadastro -->
+        <div>
+            <button onclick="mostrarForm('login')" id="btnLogin">Login</button>
+            <button onclick="mostrarForm('cadastro')" id="btnCadastro">Cadastro</button>
+        </div>
+
+        <!-- Formulário de login -->
+        <form class="form-container active" id="formLogin" method="post" action="backend/usuario/proc_login.php">
+            <h2>Login</h2>
+            <label for="cpf">CPF:</label><br>
+            <input type="text" id="cpf" name="cpf"><br><br>
+            <label for="password">Senha:</label><br>
+            <input type="password" id="senha" name="senha"><br><br>
+            <input class="botao" type="submit" value="  Login  ">
+        </form>
+
+        <!-- Formulário de cadastro -->
+        <form class="form-container" id="formCadastro" action="backend/usuario/proc_cadastro.php" method="post"
+        onsubmit="return validarFormulario()">
+            <h2>Cadastro</h2>
+            <label for="nome">Seu nome:</label><br>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="cartao_sus">Cartão do SUS:</label><br>
+            <input type="text" id="cartao_sus" name="cartao_sus"><br><br>
+
+            <label for="novoCPF">CPF:</label><br>
+            <input type="text" id="novoCPF" name="novoCPF"><br><br>
+
+            <label for="cartao_sus">Telefone:</label><br>
+            <input type="text" id="telefone" name="telefone"><br><br>
+
+            <label for="nascimento">Data de nascimento:</label> <br>
+            <input type="date" name="nascimento" id="nascimento"> <br><br>
+
+            <label for="sexo">Sexo:</label><br>
+            <select id="sexo" name="sexo">
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            </select><br><br>
+
+            <!-- Mensagem de erro para a confirmação de senha -->
+            <p id="mensagemErro" style="color: red; margin-bottom: 5px;"></p>
+
+            <label for="novaSenha">Senha:</label><br>
+            <input type="password" id="novaSenha" name="novaSenha" oninput="validarSenha()"><br><br>
+
+            <label for="confirmarSenha">Confirmar Senha:</label><br>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" oninput="validarSenha()"><br><br>
+
+            <input class="botao" type="submit" value=" Cadastrar ">
+        </form>
+    </div>
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+<script>
+    $('#novoCPF').mask('000.000.000-00', {reverse: true});
+    $('#telefone').mask('(00) 0 0000-0000');
+    $('#cartao_sus').mask('000 0000 0000 0000');
+</script>
+<script src="frontend/assets/js/cadastroUsuario.js"></script>    
+</body>
+</html>

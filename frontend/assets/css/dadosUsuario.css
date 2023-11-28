@@ -1,0 +1,95 @@
+/* Estilos para o ícone do usuário */
+.icone_usuario {
+    display: grid; /* Utiliza um layout de grid */
+    place-items: center; /* Centraliza os elementos */
+}
+
+/* Estilos para o texto dentro do ícone */
+.icone_usuario h5 {
+    display: block; /* Define o elemento h5 como bloco */
+}
+
+/* Estilos para a imagem do ícone do usuário */
+.icone_usuario img {
+    width: 8vw; /* Define a largura da imagem em relação à largura da janela visível */
+    display: block; /* Define o elemento img como bloco */
+}
+
+/* Distância entre os containers */
+.dados1 {
+    margin-top: 3vh; /* Margem superior */
+    margin-bottom: 2vh; /* Margem inferior */
+    max-width: 100vw; /* Largura máxima igual à largura da janela visível */
+}
+
+/* Estilos para a coluna */
+.col-md-6 {
+    display: flex; /* Utiliza um layout flexível */
+    flex-direction: column; /* Define a direção dos itens como coluna */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilos para os parágrafos */
+p {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilos responsivos para telas menores */
+@media screen and (max-width:768px) {
+    .containers {
+        display: flex; /* Utiliza um layout flexível */
+        flex-direction: column; /* Define a direção dos itens como coluna */
+        align-items: center; /* Alinha os itens verticalmente */
+    }
+
+    img {
+        min-width: 80px; /* Define a largura mínima da imagem */
+        max-width: 100%; /* Garante que a imagem não ultrapasse o container pai */
+    }
+}
+
+/* Estilos para os campos de texto */
+.campo-estatico {
+    pointer-events: none; /* Desativa a interação com o campo de texto */
+    border: none; /* Remove a borda */
+    width: 25vw; /* Define a largura do campo de texto */
+    border-bottom: 1px solid black; /* Adiciona uma linha contínua abaixo dos campos */
+    padding-bottom: 2px; /* Define a distância entre a linha e o campo de texto */
+    font-weight: bold; /* Define o texto como negrito */
+    box-sizing: border-box; /* Inclui a largura da borda e do preenchimento no cálculo total da largura */
+    min-width: 250px; /* Define a largura mínima do campo */
+}
+
+/* Estilos do formulário */
+#containerCadastro {
+    display: none; /* Oculta o formulário inicialmente */
+    position: fixed; /* Fixa o formulário na página */
+    top: 50%; /* Posiciona o topo do formulário no centro vertical */
+    left: 50%; /* Posiciona a esquerda do formulário no centro horizontal */
+    transform: translate(-50%, -50%); /* Centraliza o formulário */
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 20px; /* Borda arredondada */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra ao redor do formulário */
+    z-index: 9999; /* Coloca o formulário na frente de outros elementos */
+}
+
+/* Estilos para cobrir a tela quando o formulário estiver aberto */
+#overlay {
+    display: none; /* Oculta o overlay inicialmente */
+    position: fixed; /* Fixa o overlay na página */
+    top: 0; /* Posiciona o topo do overlay no início vertical */
+    left: 0; /* Posiciona a esquerda do overlay no início horizontal */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo preta com transparência */
+    z-index: 9998; /* Coloca o overlay na frente de outros elementos, mas atrás do formulário */
+}
+
+/* Estilo para centralizar o botão de fechar no formulário */
+#fechar {
+    position: absolute; /* Posicionamento absoluto dentro do formulário */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    cursor: pointer; /* Cursor do mouse ao passar sobre o botão */
+}

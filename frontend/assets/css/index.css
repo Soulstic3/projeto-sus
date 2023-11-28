@@ -1,0 +1,153 @@
+/* Estilos para o contêiner de cadastro/login */
+.cadastro-login {
+    background-color: white; /* Define a cor de fundo */
+}
+
+/* Estilos para o botão de entrar */
+@media (max-width: 100vw) {
+    .botao-entrar {
+        text-align: center; /* Alinha o texto ao centro */
+        display: inline-block; /* Define o elemento como bloco com display inline */
+        background-color: #3970c9; /* Define a cor de fundo */
+        color: white; /* Define a cor do texto */
+        padding: 10px 20px; /* Define o preenchimento interno */
+        border-radius: 50px; /* Define o raio da borda */
+        text-decoration: none; /* Remove decoração de texto */
+        border: none; /* Remove a borda */
+        font-weight: bold; /* Define o peso da fonte */
+        font-size: 1.1em; /* Define o tamanho da fonte */
+        transition: background-color 0.3s ease; /* Adiciona transição suave */
+        white-space: nowrap; /* Impede a quebra de linha */
+        margin: 10px; /* Define a margem */
+    }
+}
+
+/* Alinhar o conteúdo no centro */
+.row {
+    width: 100%; /* Define a largura total */
+    margin: 0; /* Remove margens */
+}
+
+/* Estilos para o conteúdo */
+.conteudo {
+    margin-top: 13vh; /* Define a margem superior */
+    margin-bottom: 13vh; /* Define a margem inferior */
+    display: flex; /* Define o tipo de exibição do elemento como flexível */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+}
+
+.conteudo h1 {
+    font-size: 4vw; /* Define o tamanho da fonte como uma porcentagem da largura da janela */
+    color: white; /* Define a cor do texto */
+    margin-inline: 50px; /* Define a margem interna horizontal */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .row {
+        width: 100%; /* Define a largura total */
+        margin: 0; /* Remove margens */
+    }
+
+    .conteudo h1 {
+        font-size: 6vw; /* Define o tamanho da fonte como uma porcentagem da largura da janela */
+        margin-inline: 20px; /* Define a margem interna horizontal */
+        text-align: left; /* Alinha o texto à esquerda */
+        white-space: normal; /* Permite a quebra de linha */
+        display: block; /* Define o tipo de exibição do elemento como bloco */
+    }
+
+    .logotipo {
+        min-width: 100px; /* Define a largura mínima */
+        padding: 1.0vw; /* Define o preenchimento */
+    }
+}
+
+/* Estilos para o container de login */
+.container-01 {
+    background-color: white; /* Define a cor de fundo */
+    margin: 50px; /* Define a margem */
+    width: 90%; /* Define a largura */
+    height: 90%; /* Define a altura */
+    position: absolute; /* Define a posição absoluta */
+    border-radius: 20px; /* Define o raio da borda */
+}
+
+/* Estilos para esconder os formulários */
+.form-container {
+    display: none; /* Esconde o elemento */
+}
+
+/* Mostrar apenas o formulário ativo */
+.form-container.active {
+    display: block; /* Mostra o elemento */
+}
+
+/* Estilos para o botão no header */
+header {
+    display: flex; /* Define o tipo de exibição do elemento como flexível */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px; /* Define o preenchimento */
+    background-color: #f2f2f2; /* Define a cor de fundo */
+}
+
+header .logo {
+    flex: 1; /* Define o elemento como flexível */
+}
+
+header button {
+    background-color: #007bff; /* Define a cor de fundo */
+    width: 170px; /* Define a largura */
+    height: 50px; /* Define a altura */
+    color: white; /* Define a cor do texto */
+    padding: 8px 16px; /* Define o preenchimento */
+    margin-right: 20px; /* Define a margem à direita */
+    border: none; /* Remove a borda */
+    border-radius: 50px; /* Define o raio da borda */
+    cursor: pointer;
+}
+
+/* Estilos para o contêiner de login */
+#loginContainer {
+    display: none; /* Esconde o elemento */
+    position: fixed; /* Define a posição fixa */
+    top: 50%; /* Define a posição superior */
+    left: 50%; /* Define a posição esquerda */
+    transform: translate(-50%, -50%); /* Centraliza o elemento horizontal e verticalmente */
+    background-color: #fff; /* Define a cor de fundo */
+    padding: 20px; /* Define o preenchimento */
+    width: 300px; /* Define a largura */
+    border: 1px solid #ccc; /* Define a borda */
+    border-radius: 20px; /* Define o raio da borda */
+    z-index: 9999; /* Define a ordem de empilhamento */
+    transition: opacity 0.3s ease-out; /* Adiciona transição de opacidade */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
+}
+
+/* Estilização para os botões dentro do contêiner */
+#loginContainer div {
+    display: flex; /* Define o tipo de exibição do elemento como flexível */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    margin-bottom: 10px; /* Define a margem inferior */
+}
+
+#loginContainer button {
+    background-color: #004da0; /* Define a cor de fundo */
+    width: 100px; /* Define a largura */
+    height: 35px; /* Define a altura */
+    color: white; /* Define a cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 15px; /* Define o raio da borda */
+    cursor: pointer; /* Define o cursor do mouse */
+}
+
+#loginContainer button:first-child {
+    margin-left: 30px; /* Define a margem à esquerda */
+}
+
+#loginContainer button:last-child {
+    margin-right: 30px; /* Define a margem à direita */
+}

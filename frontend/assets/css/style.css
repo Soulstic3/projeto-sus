@@ -1,0 +1,41 @@
+/* Definição da fonte personalizada */
+@font-face {
+    font-family: Sen;
+    src: url(font/Sen-Regular.ttf);
+}
+
+/* Estilos para o conteúdo geral */
+html, body {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    font-family: "Sen"; /* Define a fonte para "Sen" */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    height: 100%; /* Define a altura como 100% da janela do navegador */
+    width: 100%; /* Define a largura como 100% da janela do navegador */
+    max-width: 100vw; /* Limita a largura máxima à largura da janela visível */
+
+    /* Overflow-x: hidden; REMOVER A BARRA DE ROLAGEM HORIZONTAL NO CORPO DO DOCUMENTO 
+       PODE REMOVER PROBLEMAS DE LAYOUT, MAS NÃO É IDEAL QUANDO HÁ CONTEÚDO HORIZONTAL */
+}
+
+/* Estilos para a logo */
+.logotipo {
+    width: 10vw; /* Tamanho da imagem do logotipo */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: white; /* Define a cor de fundo do cabeçalho como branco */
+    margin-bottom: 90px;
+}
+
+.botao {
+    background-color: #007bff; /* Define a cor de fundo */
+    width: auto; /* Define a largura */
+    height: 35px; /* Define a altura */
+    color: white; /* Define a cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 15px; /* Define o raio da borda */
+    cursor: pointer; /* Define o cursor do mouse */
+}
